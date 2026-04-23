@@ -136,19 +136,9 @@ function connect() {
 }
 
 // resize event
-let resizeTimeout;
-let lastWidth = window.innerWidth;
-
 window.addEventListener('resize', function () {
-    // Only resize if width changes significantly (fixes mobile scroll glitch where address bar hides/shows)
-    if (Math.abs(window.innerWidth - lastWidth) > 50) {
-        clearTimeout(resizeTimeout);
-        resizeTimeout = setTimeout(() => {
-            lastWidth = window.innerWidth;
-            resizeCanvas();
-            init();
-        }, 250);
-    }
+    resizeCanvas();
+    init();
 });
 
 // mouse out event
