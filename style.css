@@ -375,6 +375,8 @@ p {
     padding: 1.4rem;
     display: grid;
     gap: 0.7rem;
+    content-visibility: auto;
+    contain-intrinsic-size: 320px 520px;
 }
 
 .member img {
@@ -384,6 +386,7 @@ p {
     object-fit: cover;
     background: rgba(255, 255, 255, 0.08);
     filter: saturate(1.05);
+    display: block;
 }
 
 .member h4 {
