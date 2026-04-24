@@ -147,5 +147,7 @@ window.addEventListener('pointerleave', function () {
     mouse.y = undefined;
 });
 
-init();
-animate();
+if (!isMobile) {
+    init();
+    animate();
+}
